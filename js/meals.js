@@ -22,10 +22,10 @@ const displayData = data =>{
         div.innerHTML = `
         <div class=" md:flex gap-3 border-2 border-red-300 p-5">
             <div>
-                <img src="images/banner_1.png" class=" w-100 md:h-72" alt="">
+                <img src="${foodList.strMealThumb}" class=" w-100 md:h-72" alt="">
             </div>
                 <div>
-                    <h2 class="text-3xl mb-3 mt-4">Chicken Handi</h2>
+                    <h2 class="text-3xl mb-3 mt-4">${foodList.strMeal}</h2>
                     <p class="mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, sint.</p>
                     <button class="text-yellow text-2xl">View Details</button>
                 </div>
