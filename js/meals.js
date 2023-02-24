@@ -40,7 +40,14 @@ const displayData = data =>{
 const searchFood = ()=>{
    
     const searchFood = document.getElementById('searchFood').value;
-    mealsDb(searchFood);
+    if(searchFood=='')
+    {
+        alert('Enter your food Name like fish, burger etc.. ');
+    }
+    else{
+        mealsDb(searchFood);
+    }
+    
 }
 // Calling the mealsDb;
 mealsDb('fish');
