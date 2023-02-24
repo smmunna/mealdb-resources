@@ -10,9 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <!-- DAIZY UI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -32,10 +29,16 @@
     </script>
 </head>
 
-<body class="font-poppins ">
+<body class="font-poppins md:px-10 md:pt-5 ">
     <!-- Header Section -->
         <header>
-
+            <!-- Navigation Bar -->
+            <nav class="flex justify-between bg-slate-300 px-2 py-2">
+                <div class="nav-header text-3xl font-semibold p-3">Tasty Hut</div>
+                <div class="sign-up md:mt-2"> <button class="bg-yellow p-3 font-bold rounded hover:bg-slate-400 hover:text-white">Sign-Up</button></div>
+            </nav>
+              
+            <!-- End of Navbar -->
         </header>
     <!-- End of Header -->
 
@@ -47,7 +50,7 @@
 
     <!-- Footer Section -->
         <footer>
-            
+
         </footer>
     <!-- End of Footer Section -->
 
