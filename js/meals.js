@@ -14,6 +14,7 @@ const mealsDb = async(food) =>{
 const displayData = data =>{
     // parent div;
     const parentDiv = document.getElementById('parentDiv');
+    parentDiv.innerHTML='';
     // forEach loop for taking the data for database;
     data.forEach(foodList=>{
         console.log(foodList)
@@ -33,6 +34,13 @@ const displayData = data =>{
         `;
         parentDiv.appendChild(div);
     })
+}
+
+// Search Food;
+const searchFood = ()=>{
+   
+    const searchFood = document.getElementById('searchFood').value;
+    mealsDb(searchFood);
 }
 // Calling the mealsDb;
 mealsDb('fish');
