@@ -11,8 +11,6 @@ const mealsDb = async (food, id) => {
         else {
             displayData(data.meals.slice(0, 12));
         }
-
-
     } catch (error) {
         console.log(error);
     }
