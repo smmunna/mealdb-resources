@@ -1,32 +1,32 @@
 // Finding the Meals;
-const mealsDb = async(food,id) =>{
+const mealsDb = async (food, id) => {
     console.log(id)
-    const url =`https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`;
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`;
     try {
         const meals = await fetch(url);
         const data = await meals.json();
-        if(id===4){
-            displayData(data.meals.slice(0,id));
+        if (id === 4) {
+            displayData(data.meals.slice(0, id));
         }
-        else{
-            displayData(data.meals.slice(0,12));
+        else {
+            displayData(data.meals.slice(0, 12));
         }
-        
+
 
     } catch (error) {
         console.log(error);
     }
 }
 
-const displayData = data =>{
+const displayData = data => {
     // parent div;
     const parentDiv = document.getElementById('parentDiv');
-    parentDiv.innerHTML='';
+    parentDiv.innerHTML = '';
     // forEach loop for taking the data for database;
-    data.forEach(foodList=>{
+    data.forEach(foodList => {
         //console.log(foodList);
         const div = document.createElement('div');
-        
+
         div.innerHTML = `
         <div class=" md:flex gap-3 border-2 border-red-300 p-5">
             <div>
@@ -44,25 +44,24 @@ const displayData = data =>{
 }
 
 // Search Food;
-const searchFood = ()=>{
-   
+const searchFood = () => {
+
     const searchFood = document.getElementById('searchFood').value;
-    if(searchFood=='')
-    {
+    if (searchFood == '') {
         alert('Enter your food Name like fish, burger etc.. ');
     }
-    else{
+    else {
         mealsDb(searchFood);
     }
-    
+
 }
 
 // pass the Number of data;;
-const showAll =()=>{
+const showAll = () => {
     const id = 12;
     console.log(id)
-    mealsDb('fish',id)
-    
+    mealsDb('fish', id)
+
 }
 //By default, Calling the mealsDb;
-mealsDb('fish',4);
+mealsDb('fish', 4);
